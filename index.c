@@ -61,7 +61,7 @@ void delete() {
 }
 
 void update() {
-    int pos, newVal;
+    int pos, newUpdate;
     printf("Enter position to update (0 to %d): ", size - 1);
     scanf("%d", &pos);
     if (pos < 0 || pos >= size) {
@@ -69,8 +69,8 @@ void update() {
         return;
     }
     printf("Enter new value: ");
-    scanf("%d", &newVal);
-    arr[pos] = newVal;
+    scanf("%d", &newUpdate);
+    arr[pos] = newUpdate;
     printf("Updated successfully.\n");
 }
 
@@ -122,7 +122,7 @@ int main() {
         scanf("%d", &arr[i]);
     }
     size = initial;
-    display();  // প্রথমবার দেখানো
+    display();
 
     int choice;
     do {
@@ -148,7 +148,7 @@ int main() {
                 break;
             case 5:
                 search();
-                display(); // চাইলে বাদ দিতে পারো
+                display();
                 break;
             case 6:
                 sort();
